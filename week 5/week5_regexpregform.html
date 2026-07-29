@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>User Validation</title>
+
+<style>
+legend {
+display: block;
+padding-left: 2px;
+padding-right: 2px;
+border: none;
+}
+</style>
+<script type="text/javascript">
+function validate() {
+var fn=document.getElementById("fn");
+var fname=fn.value;
+var ln=document.getElementById("ln");
+var lname=ln.value;
+ var un=document.getElementById("un");
+var uname=un.value;
+var pwd=document.getElementById("pwd");
+var pass=pwd.value;
+var cpwd=document.getElementById("cpwd");
+ var cpass=cpwd.value;
+var em = document.getElementById("e");
+var email = em.value;
+var m=document.getElementById("ph");
+var mobile=m.value;
+<html>
+<head>
+<title>User Validation</title>
+
+<style>
+legend {
+display: block;
+padding-left: 2px;
+padding-right: 2px;
+border: none;
+}
+</style>
+<script type="text/javascript">
+function validate() {
+var fn=document.getElementById("fn");
+var fname=fn.value;
+var ln=document.getElementById("ln");
+var lname=ln.value;
+ var un=document.getElementById("un");
+var uname=un.value;
+var pwd=document.getElementById("pwd");
+var pass=pwd.value;
+var cpwd=document.getElementById("cpwd");
+ var cpass=cpwd.value;
+var em = document.getElementById("e");
+var email = em.value;
+var m=document.getElementById("ph");
+var mobile=m.value;
+ var fre=/^[A-Za-z]+$/
+ var lre=/^[A-Za-z]+$/
+ var unre=/^[a-zA-Z]+[0-9a-zA-Z._]*$/
+ var ere=/^[a-zA-Z]+([\._]?\w+)*@\w+([\._]?\w+)*(\.\w{2,3})+$/
+ var mre=/^[6-9][0-9]{9}$/;
+ var pwdre=/^(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/
+if (fre.test(fname)) {
+if(lre.test(lname))
+{
+ if(unre.test(uname)){
+ if(ere.test(email))
+ {
+ if(pwdre.test(pass))
+ {
+ if (cpass==pass)
+ {
+  if(mre.test(mobile))
+  {
+  alert("done");
+  return true;
+  }
+  else 
+ {                                            
+alert("Invalid");
+m.style.border = "red solid 3px";        
+m.value='';
+m.placeholder="Invalid";
+ return false;
+      }
+ }
+else {
+ alert("Invalid");
+cpwd.style.border = "red solid 3px";        
+cpwd.value='';
+cpwd.placeholder="Invalid";
+return false;
+}
+ }
+ else 
+{alert("Invalid");
+pwd.style.border = "red solid 3px";        
+pwd.value='';
+pwd.placeholder="Invalid";
+return false;
+ }
+ }
+ else {
+ alert("Invalid");
+em.style.border = "red solid 3px";        
+em.value='';
+em.placeholder="Invalid";
+return false;
+ }
+ }
+ else {
+ alert("Invalid");
+un.style.border = "red solid 3px";        
+un.value='';
+un.placeholder="Invalid";
+return false;
+ }
+ }
+else {
+alert("Invalid");
+ln.style.border = "red solid 3px";        
+ln.value='';
+ln.placeholder="Invalid";
+return false;
+ }
+ }
+else {
+ /*alert("Invalid");
+fn.style.border = "red solid 3px";        
+fn.value='';
+fn.placeholder="Invalid";
+return false;*/
+ return err(fn)
+ }
+ }
+ function err(ele)
+ {
+ele.style.border = "red solid 3px";        
+ele.value='';
+ele.placeholder="Invalid";
+return false;
+}
+</script>
+</head>
+<body bgcolor="purple">
+<center>
+<h1>Email Registration</h1>
+<form>
+<fieldset style="width:300px">
+<legend>Registation Form</legend>
+<table>
+<tr>
+<input type="text"     id="fn" placeholder="Firstname" maxlength="10">
+</tr>
+<br><br>
+<tr>
+<input type="text" id="ln"    placeholder="Lastname” maxlength="10">
+</tr>
+<br><br>
+<tr>
+<input type="text" id="un"   placeholder="UserName" maxlength="10">
+</tr>
+<br><br>
+<tr>
+<input type="email"    id="e" 	placeholder="Email" >
+</tr>
+<br><br>
+<tr>
+<input type="password"  id="pwd"   placeholder="Password">
+</tr>
+<br><br>
+<tr>
+<input type="password"  id="cpwd"  placeholder="Confirm">
+</tr>
+<br><br>
+<tr>
+<input type="text"    id="ph"   placeholder="Mobile">
+</tr>
+<br><br>
+<tr>
+<label>Gender:</label>
+<select id="gender">
+<option value="male">male</option>
+<option value="female">female</option>
+<option value="others">others</option>
+</select>
+</tr>
+<br><br>
+<tr><input type="submit" onclick="return validate()"   value="create">
+</tr>
+</table>
+</fieldset>
+</form></div>
+</center>
+</body>
+</html>
