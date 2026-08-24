@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE bookstore SYSTEM "books.dtd">
+
+<bookstore>
+    <book>
+        <title>web programming</title>
+        <author>chrisbates</author>
+        <ISBN>123-456-789</ISBN>
+        <publisher>wiley</publisher>
+        <edition>3</edition>
+        <price>350</price>
+    </book>
+
+    <book>
+        <title>internet worldwideweb</title>
+        <author>ditel&amp;ditel</author>
+        <ISBN>123-456-781</ISBN>
+        <publisher>person</publisher>
+        <edition>3</edition>
+        <price>450</price>
+    </book>
+</bookstore>
